@@ -1,11 +1,11 @@
 def single_root_words(root_word, *other_words):
-    root_word.lower()
-    other_words = [s.lower() for s in other_words]
+    word = root_word.lower()
+    other = [s.lower() for s in other_words]
 
     same_words = []
-    for _ in other_words:
-        if other_words.count(root_word):
-            same_words += root_word
+    for words in other:
+        if word in words:
+            same_words.append(words)
 
     return same_words
 
